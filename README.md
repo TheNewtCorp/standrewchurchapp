@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="St. Andrew Greek Orthodox Church App Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # St. Andrew Greek Orthodox Church Mobile App
 
 A modern, mobile-first web application designed for the St. Andrew Greek Orthodox Church community in Miami, FL. This app provides easy access to liturgical readings, daily prayers, live services, and community resources.
