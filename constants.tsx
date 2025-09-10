@@ -3,7 +3,7 @@ import { Section } from './types';
 import { BookOpenIcon, BellIcon, VideoCameraIcon, TvIcon, SparklesIcon, NewspaperIcon } from './components/Icons';
 import PDFViewer from './components/PDFViewer';
 
-export const LOGO_BASE64 = './logo.png';
+export const LOGO_BASE64 = '/logo.png';
 
 export const SECTIONS: Section[] = [
   {
