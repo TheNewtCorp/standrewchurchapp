@@ -110,7 +110,7 @@ export const SECTIONS: Section[] = [
     content: (
       <div className='p-4 space-y-4 text-gray-700'>
         <p>Stay up to date with the latest news, events, and announcements from our community.</p>
-        <PDFViewer pdfUrl='/weekly-newsletter.pdf' title='Upcoming Events' />
+        <PDFViewer pdfUrl='/Weekly Newsletter - 09-21-2025.pdf' title='Upcoming Events' />
       </div>
     ),
   },
