@@ -62,10 +62,6 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
           />
         </div>
       )}
-
-      <div className='text-xs sm:text-sm text-gray-500 text-center px-2'>
-        <p>Sunday Before Holy Cross - September 7, 2025</p>
-      </div>
     </div>
   );
 };

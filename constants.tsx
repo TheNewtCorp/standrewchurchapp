@@ -42,7 +42,9 @@ export const SECTIONS: Section[] = [
     icon: <VideoCameraIcon className='h-8 w-8 text-[#28348a]' />,
     content: (
       <div className='p-4 space-y-4 text-gray-700'>
-        <p>Join our weekly Bible study session on Zoom where we delve into the scriptures.</p>
+        <p>
+          Join our weekly Wednesday Bible study sessions on Zoom where we delve into the scriptures with Fr. Aristidis.
+        </p>
         <a
           onClick={() => window.open('https://us02web.zoom.us/j/3513199139?pwd=MW1zQnNjKzVTeFdBUDB5NTZtYnFSZz09')}
           className='inline-block bg-[#28348a] text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-800 transition-colors'
