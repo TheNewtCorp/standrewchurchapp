@@ -110,12 +110,7 @@ export const SECTIONS: Section[] = [
     content: (
       <div className='p-4 space-y-4 text-gray-700'>
         <p>Stay up to date with the latest news, events, and announcements from our community.</p>
-        <a
-          href='#'
-          className='inline-block bg-[#28348a] text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-800 transition-colors'
-        >
-          Read Now
-        </a>
+        <PDFViewer pdfUrl='/weekly-newsletter.pdf' title='Upcoming Events' />
       </div>
     ),
   },
