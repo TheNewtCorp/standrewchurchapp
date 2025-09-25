@@ -73,9 +73,9 @@ export const SECTIONS: Section[] = [
     title: 'Daily Prayers',
     icon: <SparklesIcon className='h-8 w-8 text-[#28348a]' />,
     content: (
-      <div className='p-4 space-y-2 text-gray-700'>
+      <div className='p-2 sm:p-4 space-y-2 max-h-[70vh] sm:max-h-[80vh] overflow-y-auto overscroll-contain text-gray-700'>
         <h4 className='text-lg font-bold'>St. Patrick's Breastplate Prayer For Protection</h4>
-        <p>
+        <p className='text-sm sm:text-base leading-relaxed space-y-4 break-words'>
           I arise today Through a mighty strength, the invocation of the Trinity, Through belief in the Threeness,
           Through confession of the Oneness of the Creator of creation. I arise today Through the strength of Christ's
           birth with His baptism, Through the strength of His crucifixion with His burial, Through the strength of His
