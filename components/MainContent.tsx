@@ -30,7 +30,7 @@ const MainContent: React.FC<MainContentProps> = ({ isVisible }) => {
           <div className='flex items-center space-x-2 sm:space-x-3'>
             <img src={LOGO_BASE64} alt='Logo' className='h-8 sm:h-10 w-auto' />
             <div>
-              <h1 className='text-base sm:text-lg font-bold text-[#28348a]'>St. Andrew App</h1>
+              <h1 className='text-base sm:text-lg font-bold text-[#28348a]'>St. Andrew YAL App</h1>
               <p className='text-xs sm:text-sm text-gray-500'>Miami, FL</p>
             </div>
           </div>
