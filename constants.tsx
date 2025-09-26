@@ -8,6 +8,10 @@ import {
   SparklesIcon,
   NewspaperIcon,
   PaintingIcon,
+  CalendarIcon,
+  UserGroupIcon,
+  UsersIcon,
+  AcademicCapIcon,
 } from './components/Icons';
 import PDFViewer from './components/PDFViewer';
 
@@ -28,7 +32,7 @@ export const SECTIONS: Section[] = [
   {
     id: 2,
     title: 'Upcoming Events',
-    icon: <BellIcon className='h-8 w-8 text-[#28348a]' />,
+    icon: <CalendarIcon className='h-8 w-8 text-[#28348a]' />,
     content: (
       <PDFViewer
         pdfUrl='https://calendar.google.com/calendar/u/0/embed?src=ae2c8d425172176892ad3735443afcf21e94e6ffe3c007af0e82e2f8c02910ae@group.calendar.google.com&ctz=America/New_York'
@@ -57,7 +61,7 @@ export const SECTIONS: Section[] = [
   {
     id: 4,
     title: 'Divine Liturgy / Orthros Live',
-    icon: <TvIcon className='h-8 w-8 text-[#28348a]' />,
+    icon: <UserGroupIcon className='h-8 w-8 text-[#28348a]' />,
     content: (
       <div className='p-4 space-y-4 text-gray-700'>
         <p>Watch our services live from anywhere. Click the link below to join the stream.</p>
@@ -129,6 +133,16 @@ export const SECTIONS: Section[] = [
         >
           Click To See Our Selection
         </a>
+      </div>
+    ),
+  },
+  {
+    id: 8,
+    title: 'YAL Activity Form',
+    icon: <AcademicCapIcon className='h-8 w-8 text-[#28348a]' />,
+    content: (
+      <div className='p-4 space-y-4 text-gray-700'>
+        <PDFViewer pdfUrl='https://docs.google.com/forms/d/e/1FAIpQLSfqInnsn__Bj4dKpoheVMxH9ZL8537bLZGtV_QW_DyTfWeK3g/viewform' />
       </div>
     ),
   },
