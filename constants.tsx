@@ -146,14 +146,4 @@ export const SECTIONS: Section[] = [
       </div>
     ),
   },
-  {
-    id: 9,
-    title: 'Interested In Becoming An Usher?',
-    icon: <UserGroupIcon className='h-8 w-8 text-[#28348a]' />,
-    content: (
-      <div className='p-4 space-y-4 text-gray-700'>
-        <PDFViewer pdfUrl='https://docs.google.com/forms/d/e/1FAIpQLSeLdUPtWjZBytueuyKuBmcjPFvoQ2nEBJWkefDo5KrQ4T9IQg/viewform' />
-      </div>
-    ),
-  },
 ];
