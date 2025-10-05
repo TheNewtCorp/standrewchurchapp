@@ -12,6 +12,9 @@ import {
   UserGroupIcon,
   UsersIcon,
   AcademicCapIcon,
+  DonationIcon,
+  PayPalIcon,
+  MyVancoIcon,
 } from './components/Icons';
 import PDFViewer from './components/PDFViewer';
 import { SectionContent, SectionButton } from './components/SectionContent';
@@ -127,6 +130,47 @@ export const SECTIONS: Section[] = [
     content: (
       <SectionContent>
         <PDFViewer pdfUrl='https://docs.google.com/forms/d/e/1FAIpQLSfqInnsn__Bj4dKpoheVMxH9ZL8537bLZGtV_QW_DyTfWeK3g/viewform' />
+      </SectionContent>
+    ),
+  },
+  {
+    id: 9,
+    title: 'Donate Now',
+    icon: <ThemedIcon icon={DonationIcon} />,
+    content: (
+      <SectionContent>
+        <h3 className='text-xl font-bold mb-10'>
+          Your generous donations help us continue our mission and serve our community.
+        </h3>
+
+        <div className='space-y-4'>
+          <div className='flex flex-row space-x-8'>
+            <div
+              className='flex flex-col items-center space-y-2 cursor-pointer hover:opacity-80 transition-opacity'
+              onClick={() => window.open('https://www.paypal.com/donate?hosted_button_id=W4Z3EMDW2QZ4E', '_blank')}
+            >
+              <ThemedIcon icon={PayPalIcon} />
+              <span className='text-center font-medium'>Donate via PayPal</span>
+            </div>
+
+            <div
+              className='flex flex-col items-center space-y-2 cursor-pointer hover:opacity-80 transition-opacity'
+              onClick={() => window.open('https://secure.myvanco.com/YKYD', '_blank')}
+            >
+              <ThemedIcon icon={MyVancoIcon} />
+              <span className='text-center font-medium'>Donate via Vanco</span>
+            </div>
+            <p className='text-sm'>
+              <strong>Mail-in checks and money orders:</strong>
+              <br />
+              St Andrew GOC
+              <br />
+              7901 North Kendal Drive
+              <br />
+              Miami, FL 33156
+            </p>
+          </div>
+        </div>
       </SectionContent>
     ),
   },

@@ -260,3 +260,45 @@ export const UsersIcon: React.FC<IconProps> = ({ className }) => (
     />
   </svg>
 );
+
+export const DonationIcon: React.FC<IconProps> = ({ className }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    fill='none'
+    viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5L12 21l7-7z'
+    />
+    <path strokeLinecap='round' strokeLinejoin='round' d='M12 14V8m-3 3h6' />
+  </svg>
+);
+
+export const PayPalIcon: React.FC<IconProps> = ({ className }) => (
+  <svg xmlns='http://www.w3.org/2000/svg' className={className} fill='currentColor' viewBox='0 0 24 24'>
+    <path d='M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a.985.985 0 0 0-.304-.034c-.447 0-.875.065-1.263.152l-.289 1.84c-.264 1.684-.866 2.917-1.7 3.748-.716.714-1.635 1.143-2.748 1.31-.264.04-.53.063-.795.075l-.289 1.843c-.264 1.684-.866 2.917-1.7 3.748-.716.714-1.635 1.143-2.748 1.31-.264.04-.53.063-.795.075l-.289 1.843c-.023.146-.047.291-.077.437-.31 1.58-1.304 2.42-2.82 2.42H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.41 2.097-1.304 3.748-2.47 4.9z' />
+  </svg>
+);
+
+export const MyVancoIcon: React.FC<IconProps> = ({ className }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    fill='none'
+    viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      d='M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z'
+    />
+    <path strokeLinecap='round' strokeLinejoin='round' d='M9 12l2 2 4-4' />
+  </svg>
+);
