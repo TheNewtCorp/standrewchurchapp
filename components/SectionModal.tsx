@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Section } from '../types';
+import { useTheme, getThemeClasses } from '../hooks/useTheme';
 
 interface SectionModalProps {
   section: Section;
@@ -8,6 +9,7 @@ interface SectionModalProps {
 
 const SectionModal: React.FC<SectionModalProps> = ({ section, onClose }) => {
   const [isShowing, setIsShowing] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     setIsShowing(true);
@@ -34,26 +36,48 @@ const SectionModal: React.FC<SectionModalProps> = ({ section, onClose }) => {
     <div className='fixed inset-0 z-50 flex items-center justify-center p-1 sm:p-2 md:p-4'>
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${
-          isShowing ? 'opacity-50' : 'opacity-0'
-        }`}
+        className={`fixed inset-0 transition-opacity duration-300 ease-in-out ${getThemeClasses(
+          theme,
+          'modalBackdrop',
+        )} ${isShowing ? 'opacity-100' : 'opacity-0'}`}
         onClick={handleClose}
       ></div>
 
       {/* Modal Content */}
       <div
-        className={`bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto transition-all duration-300 ease-in-out z-10 max-h-[98vh] sm:max-h-[95vh] overflow-hidden ${
-          isShowing ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-        }`}
+        className={`rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto transition-all duration-300 ease-in-out z-10 max-h-[98vh] sm:max-h-[95vh] overflow-hidden ${getThemeClasses(
+          theme,
+          'modal',
+        )} ${isShowing ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
       >
-        <header className='flex items-center justify-between p-3 sm:p-4 border-b border-gray-200'>
+        <header
+          className={`flex items-center justify-between p-3 sm:p-4 transition-colors duration-300 ${getThemeClasses(
+            theme,
+            'borderSubtle',
+          )} border-b`}
+        >
           <div className='flex items-center space-x-2 sm:space-x-3 min-w-0'>
-            <div className='flex-shrink-0 bg-blue-100 rounded-full p-1.5 sm:p-2'>{section.icon}</div>
-            <h2 className='text-base sm:text-lg font-bold text-gray-800 truncate'>{section.title}</h2>
+            <div
+              className={`flex-shrink-0 rounded-full p-1.5 sm:p-2 ${
+                theme === 'dark' ? 'bg-champagne-gold/20' : 'bg-light-accent/10'
+              }`}
+            >
+              {section.icon}
+            </div>
+            <h2
+              className={`text-base sm:text-lg font-bold truncate transition-colors duration-300 ${getThemeClasses(
+                theme,
+                'textPrimary',
+              )}`}
+            >
+              {section.title}
+            </h2>
           </div>
           <button
             onClick={handleClose}
-            className='text-gray-400 hover:text-gray-600 transition-colors p-1 flex-shrink-0'
+            className={`transition-colors p-1 flex-shrink-0 ${getThemeClasses(theme, 'textMuted')} ${
+              theme === 'dark' ? 'hover:text-champagne-gold' : 'hover:text-gray-600'
+            }`}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

@@ -3,6 +3,8 @@ import { SECTIONS, LOGO_BASE64 } from '../constants';
 import { Section } from '../types';
 import SectionCard from './SectionCard';
 import SectionModal from './SectionModal';
+import { ThemeToggle } from './ThemeToggle';
+import { useTheme, getThemeClasses } from '../hooks/useTheme';
 
 interface MainContentProps {
   isVisible: boolean;
@@ -10,6 +12,7 @@ interface MainContentProps {
 
 const MainContent: React.FC<MainContentProps> = ({ isVisible }) => {
   const [activeSection, setActiveSection] = useState<Section | null>(null);
+  const { theme } = useTheme();
 
   const openSection = (section: Section) => {
     setActiveSection(section);
@@ -26,14 +29,29 @@ const MainContent: React.FC<MainContentProps> = ({ isVisible }) => {
           isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <header className='bg-white shadow-md p-3 sm:p-4 flex items-center justify-between sticky top-0 z-10'>
+        <header
+          className={`shadow-md p-3 sm:p-4 flex items-center justify-between sticky top-0 z-10 transition-colors duration-300 ${getThemeClasses(
+            theme,
+            'secondary',
+          )}`}
+        >
           <div className='flex items-center space-x-2 sm:space-x-3'>
             <img src={LOGO_BASE64} alt='Logo' className='h-8 sm:h-10 w-auto' />
             <div>
-              <h1 className='text-base sm:text-lg font-bold text-[#28348a]'>St. Andrew YAL App</h1>
-              <p className='text-xs sm:text-sm text-gray-500'>Miami, FL</p>
+              <h1
+                className={`text-base sm:text-lg font-bold transition-colors duration-300 ${getThemeClasses(
+                  theme,
+                  'accent',
+                )}`}
+              >
+                St. Andrew YAL App
+              </h1>
+              <p className={`text-xs sm:text-sm transition-colors duration-300 ${getThemeClasses(theme, 'textMuted')}`}>
+                Miami, FL
+              </p>
             </div>
           </div>
+          <ThemeToggle />
         </header>
 
         <main className='p-3 sm:p-4 md:p-6'>

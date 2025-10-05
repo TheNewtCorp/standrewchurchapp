@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LOGO_BASE64 } from '../constants';
+import { useTheme, getThemeClasses } from '../hooks/useTheme';
 
 interface SplashScreenProps {
   isVisible: boolean;
 }
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ isVisible }) => {
+  const { theme } = useTheme();
+
   return (
     <AnimatePresence>
       {isVisible && (
@@ -15,7 +18,10 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ isVisible }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className='fixed inset-0 bg-[#f0f4f8] flex flex-col justify-center items-center z-50'
+          className={`fixed inset-0 flex flex-col justify-center items-center z-50 transition-colors duration-300 ${getThemeClasses(
+            theme,
+            'primary',
+          )}`}
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -27,7 +33,10 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ isVisible }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-              className='text-2xl sm:text-3xl md:text-4xl text-[#28348a] font-bold text-center px-4'
+              className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center px-4 transition-colors duration-300 ${getThemeClasses(
+                theme,
+                'accent',
+              )}`}
             >
               Welcome To
             </motion.h1>
