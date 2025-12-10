@@ -174,4 +174,15 @@ export const SECTIONS: Section[] = [
       </SectionContent>
     ),
   },
+
+  {
+    id: 10,
+    title: 'Volunteer For The Greek Festival!',
+    icon: <ThemedIcon icon={CalendarIcon} />,
+    content: (
+      <SectionContent>
+        <PDFViewer pdfUrl='https://docs.google.com/forms/d/e/1FAIpQLSdqPdy20D45J7lk40-y2m6FmKE8p0I9bRJuXhCG9kiA87_E1Q/viewform?pli=1' />
+      </SectionContent>
+    ),
+  },
 ];
