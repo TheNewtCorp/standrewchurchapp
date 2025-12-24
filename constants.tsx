@@ -95,46 +95,16 @@ export const SECTIONS: Section[] = [
   },
   {
     id: 7,
-    title: 'Iconography',
+    title: 'Icon & Bookstore Wish List',
     icon: <ThemedIcon icon={PaintingIcon} />,
     content: (
       <SectionContent>
-        <h3 className='text-xl font-bold mb-4'>The Art of Sacred Icons</h3>
-        <p className='mb-4'>
-          Iconography plays a vital role in Orthodox worship and spirituality. Sacred icons are not mere decorations,
-          but windows to heaven that help us connect with the divine.
-        </p>
-        <div className='space-y-4'>
-          <div>
-            <h4 className='text-lg font-semibold mb-2'>Traditional Iconography</h4>
-            <p>
-              Our church features traditional Byzantine-style icons hand-painted by skilled iconographers following
-              ancient techniques and theological principles.
-            </p>
-          </div>
-          <div>
-            <h4 className='text-lg font-semibold mb-2'>Meaning and Purpose</h4>
-            <p>
-              Each icon tells a story and serves as a focal point for prayer and meditation, connecting the faithful
-              with the saints and events they depict.
-            </p>
-          </div>
-        </div>
+        <PDFViewer pdfUrl='https://docs.google.com/forms/d/e/1FAIpQLSfimzt73hGcvEI7N6NHJNC2zSfBF4Nv2_7buut0zhd8ncEPfg/viewform' />
       </SectionContent>
     ),
   },
   {
     id: 8,
-    title: 'YAL Activity Form',
-    icon: <ThemedIcon icon={AcademicCapIcon} />,
-    content: (
-      <SectionContent>
-        <PDFViewer pdfUrl='https://docs.google.com/forms/d/e/1FAIpQLSfqInnsn__Bj4dKpoheVMxH9ZL8537bLZGtV_QW_DyTfWeK3g/viewform' />
-      </SectionContent>
-    ),
-  },
-  {
-    id: 9,
     title: 'Donate Now',
     icon: <ThemedIcon icon={DonationIcon} />,
     content: (
@@ -176,7 +146,7 @@ export const SECTIONS: Section[] = [
   },
 
   {
-    id: 10,
+    id: 9,
     title: 'Volunteer For The Greek Festival!',
     icon: <ThemedIcon icon={CalendarIcon} />,
     content: (

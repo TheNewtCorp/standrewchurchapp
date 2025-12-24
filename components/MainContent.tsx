@@ -44,7 +44,7 @@ const MainContent: React.FC<MainContentProps> = ({ isVisible }) => {
                   'accent',
                 )}`}
               >
-                St. Andrew YAL App
+                St. Andrew's Greek Orthodox Church
               </h1>
               <p className={`text-xs sm:text-sm transition-colors duration-300 ${getThemeClasses(theme, 'textMuted')}`}>
                 Miami, FL
@@ -56,8 +56,8 @@ const MainContent: React.FC<MainContentProps> = ({ isVisible }) => {
 
         <main className='p-3 sm:p-4 md:p-6'>
           <div className='animate-breathe'>
-            <div className='grid grid-cols-1 gap-3 sm:gap-4 max-w-2xl mx-auto'>
-              {SECTIONS.map((section, index) => (
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 max-w-6xl mx-auto'>
+              {SECTIONS.map((section) => (
                 <SectionCard key={section.id} section={section} onClick={() => openSection(section)} />
               ))}
             </div>
